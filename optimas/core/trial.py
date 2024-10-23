@@ -316,3 +316,10 @@ class Trial:
         for param in self._custom_parameters:
             params[param.name] = getattr(self, param.name)
         return params
+
+    def custom_parameters_as_dict(self) -> Dict:
+        """Get a mapping between names and values of the custom parameters."""
+        params = {}
+        for param in self._custom_parameters:
+            params[param.name] = getattr(self, param.name)
+        return params
